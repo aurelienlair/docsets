@@ -52,6 +52,8 @@ In your case just create/automatize so insert whatever is necessary.
 
 `aurelien@linux:~$ /usr/bin/zeal`
 
+![Result](result.png)
+
 This tutorial as been realized thanks to the help of [this](https://kapeli.com/docsets#dashDocset) great `howto`.
 Within this project you'll be able to see my own customization.
 
