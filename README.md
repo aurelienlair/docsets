@@ -25,6 +25,7 @@ We'll create a first documentation on vim with our favourite commands then let's
 ```
 aurelien@linux:~$ touch ~/.local/share/Zeal/Zeal/docsets/LocalTips.docset/Contents/Resources/Documents/vim.html
 ```
+Of course within this file feel free to add css, write the proper stuff you are interested in.
 
 3. Database creation
 
@@ -37,11 +38,15 @@ aurelien@linux:~$ /usr/bin/sqlitebrowser
 
 We need to create database and save it to `~/.local/share/Zeal/Zeal/docsets/LocalTips.docset/Contents/Resources/docSet.dsidx`
 So to do this we need to create a table called `searchIndex` and and index called `anchor` on this table.
+![Step 1](step_1.png)
+
 Then we can save the database on `~/.local/share/Zeal/Zeal/docsets/LocalTips.docset/Contents/Resources/docSet.dsidx`
 
 
 Once this is done we just need to create 1 record with the reference of our vim html page.
 In your case just create/automatize so insert whatever is necessary. 
+
+![Step 2](step_2.png)
 
 4. See the result!
 
