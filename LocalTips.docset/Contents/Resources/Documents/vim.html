@@ -1,0 +1,27 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>My Vim Documentation</title>
+  <link href="css/prettify.css" rel="stylesheet">
+ </head>
+ <script src="js/prettify.js"></script>
+ <script>
+   window.onload = (function(){ prettyPrint(); });
+ </script>
+<body>
+<div id="vibrant-ink" class="theme__preview">
+<pre class="prettyprint lang-html">
+  To delete something without saving it in a register, you can use the
+  "black hole register".
+
+  The following command:
+  - deletes inside something inside &quot;&lt;&quot; (eg. &lt;title&gt;Hello World&lt;/title&gt;) 
+  - puts it into the black hole register
+  - pastes what is in the buffer
+
+  <code class="language-bsh">aurelien@linux:~$ "_di>P</code>
+</pre>
+</body>
+</html>
