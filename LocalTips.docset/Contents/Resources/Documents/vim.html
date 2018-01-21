@@ -11,17 +11,54 @@
    window.onload = (function(){ prettyPrint(); });
  </script>
 <body>
-<div id="vibrant-ink" class="theme__preview">
+<div>
+  <h2 class="title" style="clear: both">
+    <a name=delete_without_register" id="delete_without_register" href="vim.html#delete_without_register">#</a>
+    Delete without saving into the register
+  </h2>
+</div>
+<hr />
+<div class="theme__preview">
 <pre class="prettyprint lang-html">
   To delete something without saving it in a register, you can use the
   "black hole register".
 
   The following command:
-  - deletes inside something inside &quot;&lt;&quot; (eg. &lt;title&gt;Hello World&lt;/title&gt;) 
+  - deletes inside something inside &quot;&lt;&quot; (eg. &#34;&lt;title&gt;Hello World&lt;/title&gt;&#34;) 
   - puts it into the black hole register
   - pastes what is in the buffer
 
   <code class="language-bsh">aurelien@linux:~$ "_di>P</code>
+
+  Same thing but deleting <i>until</i> &quot;&#x3E;&quot;
+  <code class="language-bsh">aurelien@linux:~$ "_dt>P</code>
+</pre>
+<div>
+  <h2 class="title">
+    <a name="jump_to_previous_location" id="jump_to_previous_location" href="vim.html#jump_to_previous_location">#</a>
+    &nbsp;Jumping to previous location
+  </h2>
+</div>
+<hr />
+<div class="theme__preview">
+<pre class="prettyprint lang-html">
+  To jump to the previous location run the following command.
+  <code class="language-bsh">aurelien@linux:~$ Ctrl-o</code>
+</pre>
+<div>
+  <h2 class="title" style="clear: both">
+    <a name="remove_current_file" id="remove_current_file" href="vim.html#remove_current_file">#</a>
+    To remove the current file from the file system with vim use &#x60;%&#x60; (% contains the name of the current file with the full path)
+  </h2>
+</div>
+<hr />
+<div class="theme__preview">
+<pre class="prettyprint lang-html">
+  Command within vim:
+  <code class="language-bsh">aurelien@linux:~$ :!rm %</code>
+
+  &#x60;!&#x60; will invoke bash while &#x60;%&#x60; is the full file path 
+  (like /home/aurelien/filename.php)
 </pre>
 </body>
 </html>
