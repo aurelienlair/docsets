@@ -1,0 +1,116 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>My Shell Documentation</title>
+  <link href="css/prettify.css" rel="stylesheet">
+ </head>
+ <script src="js/prettify.js"></script>
+ <script>
+   window.onload = (function(){ prettyPrint(); });
+ </script>
+<body>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=control_w" id="control_w" href="shell.html#control_w">#</a>
+     Ctrl+w cut the word before the cursor. If it's a path it cuts the path
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     <code class="language-bsh">aurelien@linux:~$ cd /home/aurelien</code>
+
+     will become
+
+     <code class="language-bsh">aurelien@linux:~$ cd</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=control_u" id="control_u" href="shell.html#control_u">#</a>
+     Ctrl+u cut all the words before the cursor
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     <code class="language-bsh">aurelien@linux:~$ cd /home/aurelien</code>
+
+     will become
+
+     <code class="language-bsh">aurelien@linux:~$ </code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=control_y" id="control_y" href="shell.html#control_y">#</a>
+     Ctrl+y will yank the buffer content from the cursor's position 
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Example with &#x60;aurelien&#x60; in the buffer with the cursor after /
+
+     <code class="language-bsh">aurelien@linux:~$ cd /home/</code>
+
+     will become
+
+     <code class="language-bsh">aurelien@linux:~$ cd /home/aurelien</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=alt_b" id="alt_b" href="shell.html#alt_b">#</a>
+     Alt+b will move back the cursor at the begining of the previous word 
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     If the cursor is at the end in this example
+
+     <code class="language-bsh">aurelien@linux:~$ cd /home/aurelien</code>
+
+     by pressing &#x60;alt+b&#x60; it will put the cursor at the begining 
+     of &#x60;aurelien&#x60;
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=alt_f" id="alt_f" href="shell.html#alt_f">#</a>
+     Alt+f will move forward the cursor after the word 
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     If the cursor is at the begining in this example
+
+     <code class="language-bsh">aurelien@linux:~$ cd /home/aurelien</code>
+
+     by pressing &#x60;alt+f&#x60; it will put the cursor after &#x60;cd&#x60;
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=alt_d" id="alt_d" hred="shell.html#alt_d">#</a>
+     Alt+d will delete the characters from current cursor position til the end of the word 
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     If the cursor is at the begining in this example
+
+     <code class="language-bsh">aurelien@linux:~$ cd /home/aurelien</code>
+
+     by pressing &#x60;alt+d&#x60; it will remove &#x60;cd&#x60; 
+
+     <code class="language-bsh">aurelien@linux:~$ /home/aurelien</code>
+   </pre>
+ </div>
+</body>
+</html>

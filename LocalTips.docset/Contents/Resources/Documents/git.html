@@ -11,170 +11,181 @@
    window.onload = (function(){ prettyPrint(); });
  </script>
 <body>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_status" id="git_status" href="git.html#git_status">#</a>
-    Gstatus displays the status of repository with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Gstatus</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git status</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_pull" id="git_pull" href="git.html#git_pull">#</a>
-    Gpull will fetch and replay the changes from the remote master branch with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Gpull</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git pull</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_log" id="git_log" href="git.html#git_log">#</a>
-    Glog will show the commits of the current file with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Glog</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git log filename.php</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_read" id="git_read" href="git.html#git_read">#</a>
-    Gread will checkout the file and reload the file with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Gread</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git checkout filename.php</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_remove" id="git_remove" href="git.html#git_remove">#</a>
-    Gremove will remove the file from the repository and reload the buffer with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Gremove</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git rm filename.php</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_move" id="git_move" href="git.html#git_move">#</a>
-    Gmove will rename the current file from the repository with a new name and reload the buffer with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Gmove newname.php</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git mv filename.php newname.php</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_diff" id="git_diff" href="git.html#git_diff">#</a>
-    Gdiff will give the diff of local files of the current repository with the remote branch with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim :
-  <code class="language-bsh">aurelien@linux:~$ :Gdiff HEAD </code>
-
-  It will show the differences between the local files and the last committed modification 
-  for the current branch
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git diff HEAD</code>
-  
-  Same thing with the penultimate version:
-  <code class="language-bsh">aurelien@linux:~$ :Gdiff HEAD~1 </code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_reset" id="git_reset" href="git.html#git_reset">#</a>
-    Greset will reset current HEAD to the specified state with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim to the penultimate version:
-  <code class="language-bsh">aurelien@linux:~$ :Greset HEAD~1</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git reset HEAD~1</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_commit" id="git_commit" href="git.html#git_commit">#</a>
-    Gcommit will record the current changes to the repository with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :Gcommit</code>
-
-  Is the same thing like in command line:
-  <code class="language-bsh">aurelien@linux:~$ git commit</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_help_fugitive" id="git_help_fugitive" href="git.html#git_help_fugitive">#</a>
-    Help fugitive will give you information on the commands available with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command within vim:
-  <code class="language-bsh">aurelien@linux:~$ :help fugitive</code>
-</pre>
-<div>
-  <h2 class="title" style="clear: both">
-    <a name="git_cherry_pick" id="git_cherry_pick" href="git.html#git_cherry_pick">#</a>
-    Git cherry pick will move SHA commits to another branch 
-  </h2>
-</div>
-<hr />
-<div class="theme__preview">
-<pre class="prettyprint lang-html">
-  Command in command line:
-  <code class="language-bsh">aurelien@linux:~$ git cherry-pick SHA_ID</code>
-</pre>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_status" id="git_status" href="git.html#git_status">#</a>
+     Gstatus displays the status of repository with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Gstatus</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git status</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_pull" id="git_pull" href="git.html#git_pull">#</a>
+     Gpull will fetch and replay the changes from the remote master branch with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Gpull</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git pull</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_log" id="git_log" href="git.html#git_log">#</a>
+     Glog will show the commits of the current file with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Glog</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git log filename.php</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_read" id="git_read" href="git.html#git_read">#</a>
+     Gread will checkout the file and reload the file with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Gread</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git checkout filename.php</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_remove" id="git_remove" href="git.html#git_remove">#</a>
+     Gremove will remove the file from the repository and reload the buffer with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Gremove</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git rm filename.php</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_move" id="git_move" href="git.html#git_move">#</a>
+     Gmove will rename the current file from the repository with a new name and reload the buffer with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Gmove newname.php</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git mv filename.php newname.php</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_diff" id="git_diff" href="git.html#git_diff">#</a>
+     Gdiff will give the diff of local files of the current repository with the remote branch with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim :
+     <code class="language-bsh">aurelien@linux:~$ :Gdiff HEAD </code>
+   
+     It will show the differences between the local files and the last committed 
+     modification for the current branch
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git diff HEAD</code>
+     
+     Same thing with the penultimate version:
+     <code class="language-bsh">aurelien@linux:~$ :Gdiff HEAD~1 </code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_reset" id="git_reset" href="git.html#git_reset">#</a>
+     Greset will reset current HEAD to the specified state with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim to the penultimate version:
+     <code class="language-bsh">aurelien@linux:~$ :Greset HEAD~1</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git reset HEAD~1</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_commit" id="git_commit" href="git.html#git_commit">#</a>
+     Gcommit will record the current changes to the repository with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :Gcommit</code>
+   
+     Is the same thing like in command line:
+     <code class="language-bsh">aurelien@linux:~$ git commit</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_help_fugitive" id="git_help_fugitive" href="git.html#git_help_fugitive">#</a>
+     Help fugitive will give you information on the commands available with <a href="https://github.com/tpope/vim-fugitive">fugitive</a>
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command within vim:
+     <code class="language-bsh">aurelien@linux:~$ :help fugitive</code>
+   </pre>
+ </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_cherry_pick" id="git_cherry_pick" href="git.html#git_cherry_pick">#</a>
+     Git cherry pick will move SHA commits to another branch 
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command in command line:
+     <code class="language-bsh">aurelien@linux:~$ git cherry-pick SHA_ID</code>
+   </pre>
+ </div>
 </body>
 </html>
