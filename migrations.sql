@@ -86,3 +86,7 @@ VALUES ('Shell move forward the cursor', 'Command', 'shell.html#alt_f');
 INSERT OR IGNORE INTO searchIndex(name, type, path)
 VALUES ('Shell delete characters from current cursor', 'Command', 'shell.html#alt_d');
 
+/* DOCTRINE*/
+INSERT OR IGNORE INTO searchIndex(name, type, path)
+VALUES ('Doctrine how to log queries', 'Command', 'doctrine.html#log_query');
+

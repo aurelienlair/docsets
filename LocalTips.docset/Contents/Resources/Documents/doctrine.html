@@ -1,0 +1,33 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>My Doctrine Documentation</title>
+  <link href="css/prettify.css" rel="stylesheet">
+ </head>
+ <script src="js/prettify.js"></script>
+ <script>
+   window.onload = (function(){ prettyPrint(); });
+ </script>
+<body>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name=log_query" id="log_query" href="doctrine.html#log_query">#</a>
+     How to log queries with <a href="http://www.doctrine-project.org/#">Doctrine</a>
+   </h2>
+ </div>
+ <div class="theme__preview">
+   <pre class="prettyprint linenums">
+public function save($game)
+{   
+    $connection = $this-&#x3E;entityManager-&#x3E;getConnection();
+    $stack = new \Doctrine\DBAL\Logging\DebugStack();
+    $connection-&#x3E;getConfiguration()-&#x3E;setSQLLogger($stack);
+    $this-&#x3E;entityManager-&#x3E;persist($game);
+    $this-&#x3E;entityManager-&#x3E;flush();
+    file_put_contents(&#x27;/www/var/logs/sql.log&#x27;, json_encode($stack), FILE_APPEND);
+}   
+   </pre>
+ </div>
+ <hr />
