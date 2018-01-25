@@ -187,5 +187,50 @@
      <code class="language-bsh">aurelien@linux:~$ git cherry-pick SHA_ID</code>
    </pre>
  </div>
+ <div>
+   <h2 class="title" style="clear: both">
+     <a name="git_patch" id="git_patch" href="git.html#git_patch">#</a>
+     Git add patch allows a partial add by selecting what has to be added
+   </h2>
+ </div>
+ <hr />
+ <div class="theme__preview">
+   <pre class="prettyprint lang-html">
+     Command in command line:
+     <code class="language-bsh">aurelien@linux:~$ git add -p myfile.rb</code>
+     <code class="language-bsh">aurelien@linux:~$ git add --patch myfile.rb</code>
+   </pre>
+   <p>
+   When you pass this option to add, instead of immediately adding all the changes in the file to the index, it goes through each change and asks you what you want to do, and looks like this:
+   </p>
+   <pre class="prettyprint lang-bsh">
+    <code class="language-bsh">
+    @@ -24,7 +32,12 @@ module CoreMIDI
+       ]
+
+          functions.each do |func|
+          -    attach_function *func
+          +    begin
+          +      attach_function *func
+          +    rescue Exception => e
+          +      $stderr.puts "Couldn't attach function #{func.first}"
+          +      raise
+          +    end
+             end
+
+                def midi_read_proc()
+                Stage this hunk [y/n/a/d/K/j/J/e/?]?
+    </code>
+   </pre>
+   <p>At the top is some diff info about the current position in the file, followed by the actual diff of the source code (called &#x201C;hunk&#x201D;), and below that are your available options. Pressing <code class="prettyprint language-bsh">?</code> will give you a short explanation for each one:
+   </p>
+   <ul>
+       <li><code class="prettyprint">y</code> - <strong>Y</strong>es, add this hunk</li>
+       <li><code class="prettyprint">n</code> - <strong>N</strong>o, don’t add this hunk</li>
+       <li><code class="prettyprint">d</code> - <strong>N</strong>o, don’t add this hunk and all other remaining hunks. Useful if you’ve already added what you want to, and want to skip over the rest</li>
+       <li><code class="prettyprint">s</code> - <strong>S</strong>plit the hunk into smaller hunks. This only works if there’s unchanged lines between the changes in the displayed hunk, so this wouldn’t have any effect in the example above</li>
+       <li><code class="prettyprint">e</code> - Manually <strong>e</strong>dit the hunk. This is probably the most powerful option. As promised, it will open the hunk in a text editor and you can edit it to your hearts content</li>
+   </ul>
+ </div>
 </body>
 </html>

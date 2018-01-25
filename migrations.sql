@@ -43,6 +43,8 @@ VALUES ('Git help with Fugitive', 'Command', 'git.html#git_help_fugitive');
 INSERT OR IGNORE INTO searchIndex(name, type, path) 
 VALUES ('Git cherry-pick', 'Command', 'git.html#git_cherry_pick');
 
+INSERT OR IGNORE INTO searchIndex(name, type, path) 
+VALUES ('Git add patch', 'Command', 'git.html#git_patch');
 
 /* TMUX */
 INSERT OR IGNORE INTO searchIndex(name, type, path)
